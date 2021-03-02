@@ -117,21 +117,21 @@ def prep_data(df):
     return df
 
 
-# train_df=pd.read_csv(RAW_TRAIN_FILE)
-# train_df.spans=train_df.spans.apply(lambda row:literal_eval(row))
-# print("Processing raw train file...")
-# train_df=prep_data(train_df)
-# train_df.to_csv(TRAIN_FILE,index=False)
-# print(f"New processed file created in {TRAIN_FILE}")
-# del train_df
+train_df=pd.read_csv(RAW_TRAIN_FILE)
+train_df.spans=train_df.spans.apply(lambda row:literal_eval(row))
+print("Processing raw train file...")
+train_df=prep_data(train_df)
+train_df.to_csv(TRAIN_FILE,index=False)
+print(f"New processed file created in {TRAIN_FILE}")
+del train_df
 
-# val_df=pd.read_csv(RAW_VAL_FILE)
-# val_df.spans=val_df.spans.apply(lambda row:literal_eval(row))
-# print("Processing raw val file...")
-# val_df=prep_data(val_df)
-# val_df.to_csv(VAL_FILE,index=False)
-# print(f"New processed file created in {VAL_FILE}")
-# del val_df
+val_df=pd.read_csv(RAW_VAL_FILE)
+val_df.spans=val_df.spans.apply(lambda row:literal_eval(row))
+print("Processing raw val file...")
+val_df=prep_data(val_df)
+val_df.to_csv(VAL_FILE,index=False)
+print(f"New processed file created in {VAL_FILE}")
+del val_df
 
 test_df=pd.read_csv(RAW_TEST_FILE)
 test_df.spans=test_df.spans.apply(lambda row:literal_eval(row))
